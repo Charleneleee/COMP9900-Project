@@ -1,0 +1,5 @@
+{
+  "BACKEND_URL": "http://localhost:5000",
+  "GOOGLE_CLIENTID": "875692036072-58ljrgggvm5jtl2475kt455bi3g56tdr.apps.googleusercontent.com",
+  "MICROSOFT_CLIENTID": "ade8a99c-9944-41c4-852c-b8d26e57921d"
+}

@@ -1,0 +1,42 @@
+
+paths:
+  /list/frameworks:
+    post:
+      summary: Get all frameworks
+      description: This endpoint returns all frameworks for a given user
+      parameters:
+        - in: body
+          name: body
+          description: The token of the user
+          required: true
+          schema:
+            type: object
+            properties:
+              token:
+                type: string
+                description: The token of the user
+      responses:
+        '200':
+          description: A JSON object containing all frameworks
+          schema:
+            type: object
+            properties:
+              frameworks:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    name:
+                      type: string
+                      description: The name of the framework
+                    description:
+                      type: string
+                      description: The description of the framework
+        '400':
+          description: Invalid token
+          schema:
+            type: object
+            properties:
+              error:
+                type: string
+                description: Error message

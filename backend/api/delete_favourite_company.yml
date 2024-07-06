@@ -1,0 +1,43 @@
+
+paths:
+  /delete/favourite_company:
+    post:
+      tags:
+        - 'Favourite Company'
+      description: 'Delete a company from the user favourites'
+      operationId: 'deleteFavouriteCompany'
+      consumes:
+        - 'application/json'
+      produces:
+        - 'application/json'
+      parameters:
+        - in: 'body'
+          name: 'body'
+          description: 'Information needed to delete a company from the user favourites'
+          required: true
+          schema:
+            type: 'object'
+            properties:
+              token:
+                type: 'string'
+                description: 'User token'
+              company_name:
+                type: 'string'
+                description: 'Name of the company'
+      responses:
+        '200':
+          description: 'Company deleted from favourites'
+          schema:
+            type: 'object'
+            properties:
+              message:
+                type: 'string'
+                example: 'Favourite company deleted!'
+        '400':
+          description: 'Invalid token'
+          schema:
+            type: 'object'
+            properties:
+              error:
+                type: 'string'
+                example: 'Invalid token'

@@ -1,0 +1,43 @@
+
+paths:
+  /create/favourite_company:
+    post:
+      tags:
+        - 'Favourite Company'
+      description: 'Add a company to the user favourites'
+      operationId: 'createFavouriteCompany'
+      consumes:
+        - 'application/json'
+      produces:
+        - 'application/json'
+      parameters:
+        - in: 'body'
+          name: 'body'
+          description: 'Information needed to add a company to the user favourites'
+          required: true
+          schema:
+            type: 'object'
+            properties:
+              token:
+                type: 'string'
+                description: 'User token'
+              company_name:
+                type: 'string'
+                description: 'Name of the company'
+      responses:
+        '200':
+          description: 'Company added to favourites'
+          schema:
+            type: 'object'
+            properties:
+              message:
+                type: 'string'
+                example: 'Add company to favourites success!'
+        '400':
+          description: 'Invalid token'
+          schema:
+            type: 'object'
+            properties:
+              error:
+                type: 'string'
+                example: 'Invalid token'

@@ -1,0 +1,39 @@
+
+paths:
+  /list/favourite_companies:
+    post:
+      summary: Get all favourite companies
+      description: This endpoint returns all favourite companies for a given user
+      parameters:
+        - in: body
+          name: body
+          description: The token of the user
+          required: true
+          schema:
+            type: object
+            properties:
+              token:
+                type: string
+                description: The token of the user
+      responses:
+        '200':
+          description: A JSON object containing all favourite companies
+          schema:
+            type: object
+            properties:
+              favourites:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    name:
+                      type: string
+                      description: The name of the company
+        '400':
+          description: Invalid token
+          schema:
+            type: object
+            properties:
+              error:
+                type: string
+                description: Error message

@@ -1,0 +1,23 @@
+
+paths:
+  /country/all:
+    post:
+      summary: Get all countries
+      description: This endpoint returns all countries and their codes
+      responses:
+        '200':
+          description: A JSON object containing all countries
+          schema:
+            type: object
+            properties:
+              countries:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    name:
+                      type: string
+                      description: The name of the country
+                    code:
+                      type: string
+                      description: The code of the country

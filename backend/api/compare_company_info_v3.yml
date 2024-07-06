@@ -1,0 +1,92 @@
+
+paths:
+  /compare_company_info/v3:
+    post:
+      summary: Compare information of two companies
+      description: This endpoint compares the information of two companies based on a given framework
+      parameters:
+        - in: body
+          name: body
+          description: The names of the two companies and the framework to use for comparison
+          required: true
+          schema:
+            type: object
+            properties:
+              company_1_name:
+                type: string
+                description: The name of the first company
+              company_2_name:
+                type: string
+                description: The name of the second company
+              framework:
+                type: string
+                description: The framework to use for comparison
+      responses:
+        '200':
+          description: A JSON object containing the comparison results
+          schema:
+            type: object
+            properties:
+              company_1_name:
+                type: string
+                description: The name of the first company
+              company_2_name:
+                type: string
+                description: The name of the second company
+              framework:
+                type: string
+                description: The framework used for comparison
+              company_1_score:
+                type: number
+                description: The final score of the first company
+              company_2_score:
+                type: number
+                description: The final score of the second company
+              Risks:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    name:
+                      type: string
+                      description: The name of the risk
+                    weight:
+                      type: number
+                      description: The weight of the risk
+                    indicators:
+                      type: array
+                      items:
+                        type: object
+                        properties:
+                          name:
+                            type: string
+                            description: The name of the indicator
+                          weight:
+                            type: number
+                            description: The weight of the indicator
+                          description:
+                            type: string
+                            description: The description of the indicator
+                          metrics:
+                            type: array
+                            items:
+                              type: object
+                              properties:
+                                name:
+                                  type: string
+                                  description: The name of the metric
+                                weight:
+                                  type: number
+                                  description: The weight of the metric
+                                description:
+                                  type: string
+                                  description: The description of the metric
+                                score_1:
+                                  type: number
+                                  description: The score of the first company for this metric
+                                score_2:
+                                  type: number
+                                  description: The score of the second company for this metric
+                                checked:
+                                  type: boolean
+                                  description: Whether this metric is checked

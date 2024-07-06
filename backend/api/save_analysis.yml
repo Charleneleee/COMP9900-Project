@@ -1,0 +1,47 @@
+
+paths:
+  /save/analysis:
+    post:
+      tags:
+        - 'Analysis'
+      description: 'Save an analysis'
+      operationId: 'saveAnalysis'
+      consumes:
+        - 'application/json'
+      produces:
+        - 'application/json'
+      parameters:
+        - in: 'body'
+          name: 'body'
+          description: 'Information needed to save an analysis'
+          required: true
+          schema:
+            type: 'object'
+            properties:
+              token:
+                type: 'string'
+                description: 'User token'
+              timestamp:
+                type: 'integer'
+                format: 'int64'
+                description: 'Timestamp of the analysis'
+              data:
+                type: 'object'
+                description: 'Data of the analysis'
+      responses:
+        '200':
+          description: 'Analysis saved'
+          schema:
+            type: 'object'
+            properties:
+              message:
+                type: 'string'
+                example: 'Analysis saved'
+        '400':
+          description: 'Invalid token'
+          schema:
+            type: 'object'
+            properties:
+              error:
+                type: 'string'
+                example: 'Invalid token'

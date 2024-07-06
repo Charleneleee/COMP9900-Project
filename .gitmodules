@@ -1,0 +1,14 @@
+[submodule "frontend"]
+    path = frontend
+    url = git@github.com:COMP9900-24T1-Nullbody/frontend.git
+    branch = main
+
+[submodule "backend"]
+    path = backend
+    url = git@github.com:COMP9900-24T1-Nullbody/backend.git
+    branch = main
+
+[submodule "resources"]
+    path = resources
+    url = git@github.com:COMP9900-24T1-Nullbody/resources.git
+    branch = main

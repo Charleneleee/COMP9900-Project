@@ -1,0 +1,160 @@
+
+paths:
+  /company_info/v3:
+    post:
+      summary: 'Get company ESG information'
+      description: 'This endpoint returns ESG information of a company based on the provided framework.'
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          description: 'The company name and framework'
+          required: true
+          schema:
+            type: object
+            properties:
+              company_name:
+                type: string
+                description: 'The name of the company'
+              framework:
+                type: string
+                description: 'The ESG framework to use'
+      responses:
+        200:
+          description: 'Successful operation'
+          schema:
+            type: object
+            properties:
+              company_name:
+                type: string
+                description: 'The name of the company'
+              framework:
+                type: string
+                description: 'The ESG framework used'
+              score:
+                type: number
+                description: 'The final ESG score'
+              Risks:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    name:
+                      type: string
+                      description: 'The name of the risk (Environmental, Social, Governance)'
+                    weight:
+                      type: number
+                      description: 'The weight of the risk'
+                    indicators:
+                      type: array
+                      items:
+                        type: object
+                        properties:
+                          name:
+                            type: string
+                            description: 'The name of the indicator'
+                          weight:
+                            type: number
+                            description: 'The weight of the indicator'
+                          description:
+                            type: string
+                            description: 'The description of the indicator'
+                          metrics:
+                            type: array
+                            items:
+                              type: object
+                              properties:
+                                name:
+                                  type: string
+                                  description: 'The name of the metric'
+                                weight:
+                                  type: number
+                                  description: 'The weight of the metric'
+                                description:
+                                  type: string
+                                  description: 'The description of the metric'
+                                score:
+                                  type: number
+                                  description: 'The score of the metric'
+                                checked:
+                                  type: boolean
+                                  description: 'Whether the metric is checked'
+
+
+# parameters:
+#         - in: body
+#           name: body
+#           description: 'The company name and framework'
+#           required: true
+#           schema:
+#             type: object
+#             properties:
+#               company_name:
+#                 type: string
+#                 description: 'The name of the company'
+#               framework:
+#                 type: string
+#                 description: 'The ESG framework to use'
+#       responses:
+#         200:
+#           description: 'Successful operation'
+#           schema:
+#             type: object
+#             properties:
+#               company_name:
+#                 type: string
+#                 description: 'The name of the company'
+#               framework:
+#                 type: string
+#                 description: 'The ESG framework used'
+#               score:
+#                 type: number
+#                 description: 'The final ESG score'
+#               Risks:
+#                 type: array
+#                 items:
+#                   type: object
+#                   properties:
+#                     name:
+#                       type: string
+#                       description: 'The name of the risk (Environmental, Social, Governance)'
+#                     weight:
+#                       type: number
+#                       description: 'The weight of the risk'
+#                     indicators:
+#                       type: array
+#                       items:
+#                         type: object
+#                         properties:
+#                           name:
+#                             type: string
+#                             description: 'The name of the indicator'
+#                           weight:
+#                             type: number
+#                             description: 'The weight of the indicator'
+#                           description:
+#                             type: string
+#                             description: 'The description of the indicator'
+#                           metrics:
+#                             type: array
+#                             items:
+#                               type: object
+#                               properties:
+#                                 name:
+#                                   type: string
+#                                   description: 'The name of the metric'
+#                                 weight:
+#                                   type: number
+#                                   description: 'The weight of the metric'
+#                                 description:
+#                                   type: string
+#                                   description: 'The description of the metric'
+#                                 score:
+#                                   type: number
+#                                   description: 'The score of the metric'
+#                                 checked:
+#                                   type: boolean
+#                                   description: 'Whether the metric is checked'

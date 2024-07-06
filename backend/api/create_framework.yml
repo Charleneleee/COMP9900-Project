@@ -1,0 +1,119 @@
+
+paths:
+  /create/framework:
+    post:
+      tags:
+        - 'Framework'
+      description: 'Create a new framework'
+      operationId: 'createFramework'
+      consumes:
+        - 'application/json'
+      produces:
+        - 'application/json'
+      parameters:
+        - in: 'body'
+          name: 'body'
+          description: 'Information needed to create a new framework'
+          required: true
+          schema:
+            type: 'object'
+            properties:
+              token:
+                type: 'string'
+                description: 'User token'
+              framework_info:
+                type: 'object'
+                description: 'Information about the framework'
+                properties:
+                  name:
+                    type: 'string'
+                    description: 'Name of the framework'
+                  description:
+                    type: 'string'
+                    description: 'Description of the framework'
+                  E_weight:
+                    type: 'number'
+                    description: 'Weight of E'
+                  S_weight:
+                    type: 'number'
+                    description: 'Weight of S'
+                  G_weight:
+                    type: 'number'
+                    description: 'Weight of G'
+                  E_indicators:
+                    type: 'array'
+                    items:
+                      type: 'object'
+                      properties:
+                        name:
+                          type: 'string'
+                        description:
+                          type: 'string'
+                        weight:
+                          type: 'number'
+                        metrics:
+                          type: 'array'
+                          items:
+                            type: 'object'
+                            properties:
+                              name:
+                                type: 'string'
+                              weight:
+                                type: 'number'
+                  S_indicators:
+                    type: 'array'
+                    items:
+                      type: 'object'
+                      properties:
+                        name:
+                          type: 'string'
+                        description:
+                          type: 'string'
+                        weight:
+                          type: 'number'
+                        metrics:
+                          type: 'array'
+                          items:
+                            type: 'object'
+                            properties:
+                              name:
+                                type: 'string'
+                              weight:
+                                type: 'number'
+                  G_indicators:
+                    type: 'array'
+                    items:
+                      type: 'object'
+                      properties:
+                        name:
+                          type: 'string'
+                        description:
+                          type: 'string'
+                        weight:
+                          type: 'number'
+                        metrics:
+                          type: 'array'
+                          items:
+                            type: 'object'
+                            properties:
+                              name:
+                                type: 'string'
+                              weight:
+                                type: 'number'
+      responses:
+        '200':
+          description: 'Framework created'
+          schema:
+            type: 'object'
+            properties:
+              message:
+                type: 'string'
+                example: 'Framework created!'
+        '400':
+          description: 'Invalid token'
+          schema:
+            type: 'object'
+            properties:
+              error:
+                type: 'string'
+                example: 'Invalid token'

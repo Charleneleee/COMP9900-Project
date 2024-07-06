@@ -1,0 +1,49 @@
+
+paths:
+  /list/analysis:
+    post:
+      tags:
+        - 'Analysis'
+      description: 'List all analyses of a user'
+      operationId: 'listAnalysis'
+      consumes:
+        - 'application/json'
+      produces:
+        - 'application/json'
+      parameters:
+        - in: 'body'
+          name: 'body'
+          description: 'Information needed to list analyses'
+          required: true
+          schema:
+            type: 'object'
+            properties:
+              token:
+                type: 'string'
+                description: 'User token'
+      responses:
+        '200':
+          description: 'List of analyses'
+          schema:
+            type: 'object'
+            properties:
+              analysis_histories:
+                type: 'array'
+                items:
+                  type: 'object'
+                  properties:
+                    timestamp:
+                      type: 'string'
+                      format: 'date-time'
+                      description: 'Timestamp of the analysis'
+                    data:
+                      type: 'object'
+                      description: 'Data of the analysis'
+        '400':
+          description: 'Invalid token'
+          schema:
+            type: 'object'
+            properties:
+              error:
+                type: 'string'
+                example: 'Invalid token'

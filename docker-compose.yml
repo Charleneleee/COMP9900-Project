@@ -1,0 +1,28 @@
+version: '3'
+services:
+  comp9900-backend:
+    build: 
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+    depends_on:
+      - comp9900-db
+
+  comp9900-frontend:
+    build: 
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    depends_on:
+      - comp9900-backend
+
+  comp9900-db:
+    image: postgres
+    environment:
+      POSTGRES_USER: yst990102
+      POSTGRES_PASSWORD: zxcvb987321
+      POSTGRES_DB: comp9900
+    ports:
+      - "5432:5432"

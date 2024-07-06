@@ -1,0 +1,36 @@
+secret_key: "COMP9900_Nullbody"
+
+smtp:
+  host: smtp-mail.outlook.com
+  user: no-reply.comp9900_nullbody@outlook.com
+  password: asdfg987321
+  port: 587
+
+redis:
+  host: singapore-redis.render.com
+  user: red-cnv2mdta73kc73c71edg
+  password: RipqoV8JcQFb02mPNORnHQwt2rN8dqaf
+  port: 6379
+
+imgur:
+  client_id: af30f5d0834af18
+  client_secret: d2823553b1510d1b72d99e421a21f72bb8a2e6dc
+  refresh_token: 8897110cb715625a3638162b1f303549337451f5
+  album: KRMK4sD # 相册名：esg, 相册ID：KRMK4sD
+
+sql:
+  # # localhost - postgresql
+  # type: postgresql
+  # host: localhost
+  # user: yst990102
+  # password: zxcvb987321
+  # name: comp9900
+  # port: 5432
+
+  # docker - postgresql
+  type: postgresql
+  host: comp9900-db
+  user: yst990102
+  password: zxcvb987321
+  name: comp9900
+  port: 5432

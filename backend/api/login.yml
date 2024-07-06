@@ -1,0 +1,31 @@
+parameters:
+  - name: Login
+    in: body
+    required: true
+    schema:
+      type: object
+      properties:
+        email:
+          type: string
+          example: test@test.com
+        password:
+          type: string
+          example: testtest
+
+responses:
+  200:
+    description: Successful Login
+    schema:
+      type: object
+      properties:
+        message:
+          type: string
+          example: Login successful
+  400:
+    description: Bad request
+    schema:
+      type: object
+      properties:
+        error:
+          type: string
+          example: Invalid email or password

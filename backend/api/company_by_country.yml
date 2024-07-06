@@ -1,0 +1,27 @@
+parameters:
+  - name: country_code
+    in: body
+    required: true
+    schema:
+      type: string
+      description: The country code to get companies.
+
+responses:
+  200:
+    description: List of companies in the specified country
+    schema:
+      type: object
+      properties:
+        companies:
+          type: array
+          items:
+            type: string
+          example: ["Company1", "Company2"]
+  400:
+    description: Bad request
+    schema:
+      type: object
+      properties:
+        error:
+          type: string
+          example: Country code is required

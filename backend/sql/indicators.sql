@@ -1,0 +1,137 @@
+DROP TABLE IF EXISTS indicators;
+CREATE TABLE indicators (
+    id SERIAL PRIMARY KEY,
+    user_id INT NOT NULL,
+    name VARCHAR(255) NOT NULL,
+    description TEXT NOT NULL
+);
+
+INSERT INTO indicators (user_id, name, description) VALUES (0, 'Carbon Emissions and Air Pollutants', 'Description for Amount of Carbon Dioxide, Other Greenhouse Gases Released, and Contamination of Air with Harmful Substances over a Given Period');
+INSERT INTO indicators (user_id, name, description) VALUES (0, 'Energy Consumption and Electricity Consumption', 'Description for Amount of Energy and Electricity Consumption over a Given Period');
+INSERT INTO indicators (user_id, name, description) VALUES (0, 'Renewable Energy and Waste', 'Description for Amount of Renewable Energy Consumption and Waste over a Given Period');
+INSERT INTO indicators (user_id, name, description) VALUES (0, 'Water Withdrawal and Sustainable Practices', 'Description for Process of Removing Water from Its Natural Source and Approaches and Methods that Aim to Reduce the Negative Impact of Human Activities on the Environment');
+INSERT INTO indicators (user_id, name, description) VALUES (0, 'Biodiversity and Climate Change Management', 'Description for strategies and actions we take to address the interconnected challenges of biodiversity loss and climate change');
+INSERT INTO indicators (user_id, name, description) VALUES (0, 'Human Rights and Gender Equality', 'Description for fundamental rights and freedoms that belong to all people, regardless of their gender identity or expression');
+INSERT INTO indicators (user_id, name, description) VALUES (0, 'Employee Well-being and Safety', 'Description for Employee Well-being and Safety refers to a holistic approach that prioritizes the physical, mental, and emotional well-being of employees alongside their safety in the workplace.');
+INSERT INTO indicators (user_id, name, description) VALUES (0, 'Ethical Practices and Compliance', 'Description for Guide Responsible Behavior Within an Organization');
+INSERT INTO indicators (user_id, name, description) VALUES (0, 'Certifications', 'Description for Wether the Certification of a Company, Product, or Service');
+INSERT INTO indicators (user_id, name, description) VALUES (0, 'Labor Relations and Employee Engagement', 'Description for Fostering Positive Relationships, Promoting Employee Well-being, Creating a Sense of Ownership, and Creating a More Productive and Satisfying Work Environment');
+INSERT INTO indicators (user_id, name, description) VALUES (0, 'Corporate Social Responsibility (CSR) and Diversity', 'Description for Companys Commitment to Operating Ethically and Sustainably, and Variety of Human Experiences, Backgrounds, and Identities Within a Company Workforce');
+INSERT INTO indicators (user_id, name, description) VALUES (0, 'Board Structure and Independence', 'Description for the Number and Type of Directors on the Board and the Ability of Non-Executive Directors to Make Independent Judgments Without Undue Influence from Management or Controlling Shareholders');
+INSERT INTO indicators (user_id, name, description) VALUES (0, 'Audit, Compliance, and Risk Management', 'Description for Crucial Functions that Work Together to Safeguard an Organization Financial Health, Operational Efficiency, and Overall Well-being');
+INSERT INTO indicators (user_id, name, description) VALUES (0, 'Compensation Policy and Performance Incentives', 'Description Of a Company Human Resource (HR) Strategy that Work Together to Attract, Retain, and Motivate Employees');
+INSERT INTO indicators (user_id, name, description) VALUES (0, 'Transparency and Accountability', 'Description for Building Trust and Ensuring Ethical Conduct Within an Organization');
+INSERT INTO indicators (user_id, name, description) VALUES (0, 'Shareholder Rights and Corporate Governance', 'Description for Relationship Between Shareholders (Owners) and the Companies They Invest In');
+
+
+DROP TABLE IF EXISTS indicator_metrics;
+CREATE TABLE indicator_metrics (
+    indicator_id INT,
+    metric_id INT
+);
+
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (1, 1);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (1, 2);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (1, 9);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (1, 31);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (1, 32);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (1, 33);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (1, 34);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (1, 65);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (1, 66);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (1, 68);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (1, 83);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (1, 95);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (1, 96);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (1, 74);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (1, 88);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (2, 48);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (2, 49);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (2, 43);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (3, 80);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (3, 81);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (3, 82);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (3, 93);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (3, 16);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (3, 52);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (3, 56);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (3, 97);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (3, 98);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (3, 99);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (3, 86);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (4, 100);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (4, 102);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (4, 101);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (4, 79);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (4, 89);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (4, 47);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (4, 50);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (4, 51);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (4, 42);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (4, 85);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (4, 78);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (4, 91);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (4, 67);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (4, 62);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (5, 24);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (5, 30);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (5, 64);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (6, 57);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (6, 58);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (6, 59);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (6, 77);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (6, 53);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (6, 104);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (6, 105);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (6, 87);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (7, 45);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (7, 46);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (7, 63);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (7, 41);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (7, 103);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (8, 70);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (8, 71);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (8, 72);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (8, 73);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (8, 75);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (8, 76);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (8, 60);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (8, 37);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (8, 38);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (8, 55);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (9, 61);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (9, 20);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (9, 84);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (10, 92);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (10, 94);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (10, 90);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (11, 15);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (11, 69);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (12, 4);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (12, 5);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (12, 10);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (12, 13);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (12, 11);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (13, 3);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (13, 6);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (13, 12);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (13, 18);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (13, 26);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (14, 7);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (14, 8);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (14, 21);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (14, 28);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (14, 29);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (15, 14);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (15, 22);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (15, 23);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (15, 25);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (15, 35);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (15, 36);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (15, 39);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (15, 40);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (16, 17);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (16, 19);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (16, 27);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (16, 44);
+INSERT INTO indicator_metrics (indicator_id, metric_id) VALUES (16, 54);

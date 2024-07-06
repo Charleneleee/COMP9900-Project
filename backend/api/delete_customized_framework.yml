@@ -1,0 +1,43 @@
+
+paths:
+  /delete/customized_framework:
+    post:
+      tags:
+        - 'Customized Framework'
+      description: 'Delete a customized framework'
+      operationId: 'deleteCustomizedFramework'
+      consumes:
+        - 'application/json'
+      produces:
+        - 'application/json'
+      parameters:
+        - in: 'body'
+          name: 'body'
+          description: 'Information needed to delete a customized framework'
+          required: true
+          schema:
+            type: 'object'
+            properties:
+              token:
+                type: 'string'
+                description: 'User token'
+              framework_name:
+                type: 'string'
+                description: 'Name of the framework'
+      responses:
+        '200':
+          description: 'Framework deleted'
+          schema:
+            type: 'object'
+            properties:
+              message:
+                type: 'string'
+                example: 'Framework deleted!'
+        '400':
+          description: 'Invalid token'
+          schema:
+            type: 'object'
+            properties:
+              error:
+                type: 'string'
+                example: 'Invalid token'

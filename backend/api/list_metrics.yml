@@ -1,0 +1,27 @@
+
+paths:
+  /list/metrics:
+    post:
+      summary: Get all metrics
+      description: This endpoint returns all metrics for a given pillar
+      parameters:
+        - in: body
+          name: body
+          description: The pillar for which to get metrics
+          required: true
+          schema:
+            type: object
+            properties:
+              pillar:
+                type: string
+                description: The pillar for which to get metrics
+      responses:
+        '200':
+          description: A JSON object containing all metrics
+          schema:
+            type: object
+            properties:
+              metrics:
+                type: array
+                items:
+                  type: string

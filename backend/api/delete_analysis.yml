@@ -1,0 +1,47 @@
+
+paths:
+  /delete/analysis:
+    post:
+      tags:
+        - 'Analysis'
+      description: 'Delete an analysis'
+      operationId: 'deleteAnalysis'
+      consumes:
+        - 'application/json'
+      produces:
+        - 'application/json'
+      parameters:
+        - in: 'body'
+          name: 'body'
+          description: 'Information needed to delete an analysis'
+          required: true
+          schema:
+            type: 'object'
+            properties:
+              token:
+                type: 'string'
+                description: 'User token'
+              timestamp:
+                type: 'integer'
+                format: 'int64'
+                description: 'Timestamp of the analysis'
+              data:
+                type: 'object'
+                description: 'Data of the analysis'
+      responses:
+        '200':
+          description: 'Analysis deleted'
+          schema:
+            type: 'object'
+            properties:
+              message:
+                type: 'string'
+                example: 'Analysis deleted'
+        '400':
+          description: 'Invalid token'
+          schema:
+            type: 'object'
+            properties:
+              error:
+                type: 'string'
+                example: 'Invalid token'

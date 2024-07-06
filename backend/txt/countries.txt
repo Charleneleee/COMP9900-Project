@@ -1,0 +1,120 @@
+1,""
+2,Antigua and Barbuda
+3,Argentina
+4,Australia
+5,Austria
+6,"Bahamas, The"
+7,Bahrain
+8,Bangladesh
+9,Barbados
+10,Belgium
+11,Bermuda
+12,Bosnia and Herzegovina
+13,Botswana
+14,Brazil
+15,British Virgin Islands
+16,Bulgaria
+17,Burundi
+18,Cambodia
+19,Canada
+20,Cayman Islands
+21,Chile
+22,China
+23,Colombia
+24,Cote d'Ivoire
+25,Croatia
+26,Curacao
+27,Cyprus
+28,Czech Republic
+29,Denmark
+30,Ecuador
+31,"Egypt, Arab Rep."
+32,Estonia
+33,Faroe Islands
+34,Finland
+35,France
+36,Georgia
+37,Germany
+38,Ghana
+39,Gibraltar
+40,Greece
+41,"Hong Kong SAR, China"
+42,Hungary
+43,Iceland
+44,India
+45,Indonesia
+46,Ireland
+47,Isle of Man
+48,Israel
+49,Italy
+50,Jamaica
+51,Japan
+52,Jordan
+53,Kazakhstan
+54,Kenya
+55,"Korea, Rep."
+56,Kuwait
+57,Latvia
+58,Lebanon
+59,Liberia
+60,Liechtenstein
+61,Lithuania
+62,Luxembourg
+63,"Macao SAR, China"
+64,Malawi
+65,Malaysia
+66,Malta
+67,Marshall Islands
+68,Mauritius
+69,Mexico
+70,Monaco
+71,Mongolia
+72,Montenegro
+73,Morocco
+74,Namibia
+75,Netherlands
+76,New Zealand
+77,Nigeria
+78,North Macedonia
+79,Norway
+80,Oman
+81,Pakistan
+82,Panama
+83,Papua New Guinea
+84,Paraguay
+85,Peru
+86,Philippines
+87,Poland
+88,Portugal
+89,Puerto Rico
+90,Qatar
+91,Romania
+92,Russian Federation
+93,Saudi Arabia
+94,Senegal
+95,Serbia
+96,Singapore
+97,Slovak Republic
+98,Slovenia
+99,South Africa
+100,Spain
+101,Sri Lanka
+102,Sweden
+103,Switzerland
+104,"Taiwan, China"
+105,Tanzania
+106,Thailand
+107,Togo
+108,Trinidad and Tobago
+109,Tunisia
+110,Turkey
+111,Uganda
+112,Ukraine
+113,United Arab Emirates
+114,United Kingdom
+115,United States
+116,"Venezuela, RB"
+117,Vietnam
+118,Virgin Islands (U.S.)
+119,Zambia
+120,Zimbabwe
